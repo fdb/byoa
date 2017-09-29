@@ -33,7 +33,20 @@ export default class App extends Component {
 }
 ```
 
-If we squint a bit, we can look at something that looks like HTML code.
+If we squint a bit, we can look at something that looks like HTML code, even though the tags are all wrong. There's a `<View>` tag, a `<Text>` tag... I don't remember having those in HTML? That's because we're not developing for the web; we're making an app. And while websites have `<h1>` for headers, `<p>` for paragraphs, `<img>` for images, in apps we have slightly different tags. And, as we'll see, we can also make our own tags (called *components* in React Native-speak).
+
+Between the `<Text>` tags we can see a piece of text that also appears on the phone. Change the text into "Welcome to my first app" and see the text automatically change on the phone. It's magic!
+
+### Troubleshooting
+Sometimes Expo loses the connection between the web app and your phone. This often happens when your phone goes to sleep. Don't panic: just click on the **QR Code** button on the website and scan the code again. I suggest connecting your phone to power to avoid it going to sleep while developing. Also, because your phone uses the internet, losing your connection means the app won't update anymore. 
+
+To scan a new QR code on your iPhone, **shake your phone**. This brings up the expo menu where you have the option to scan another QR code. On Android, drag down from the status bar to reveal the Expo icon. Select it and choose to scan a new QR code.
+
+Note that every time you press "Save Changes", you get a different URL!  You can make as many as you like. You can share the link with your friends so they can view your app as well.
+
+## Experimenting with controls
+
+
 
 
 
