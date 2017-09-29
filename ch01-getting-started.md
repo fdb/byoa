@@ -44,6 +44,37 @@ To scan a new QR code on your iPhone, **shake your phone**. This brings up the e
 
 Note that every time you press "Save Changes", you get a different URL!  You can make as many as you like. You can share the link with your friends so they can view your app as well.
 
+## Styling
+At the bottom of the example we can find something that looks like CSS: a set of *selectors* and *properties* with *values*. These define how components in our app look. The syntax is quite similar to CSS, actually, and React Native supports most styling options, including Flexbox for layout.
+
+For now, let's experiment with colors and font sizes.
+
+
+
+```
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#ecf0f1',
+  },
+  paragraph: {
+    margin: 24,
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#34495e',
+  },
+});
+```
+
+This stuff.
+
+
+
+
 ## Experimenting with controls
 
 
