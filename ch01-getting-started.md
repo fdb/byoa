@@ -205,7 +205,7 @@ To give our app personality, we can use images. High-quality images and design m
 We want to wrap everything inside the `KeyboardAvoidingView` into a `ImageBackground` component. On the line below the `<KeyboardAvoidingView>`, add the following:
 
 ```
-      <ImageBackground  source={{uri: 'https://fdb.gitbooks.io/byoa/content/assets/expo-background.jpg'}}>
+<ImageBackground  source={{uri: 'https://fdb.gitbooks.io/byoa/content/assets/expo-background.jpg'}}>
 
 ```
 
