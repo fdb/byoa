@@ -220,6 +220,84 @@ As a side note, I've prepared this image to fit on my iPhone screen using the aw
 ### Stop Indenting Code Manually
 Your might have the temptation to start reformatting the code by adding spaces every time you insert or remove tags. *Don't!* Expo Snack has a format button in the bottom bar. It looks like this: `{}`. Click it and your code will be properly formatted. When we're developing on Mac or Windows we'll also install an extension for our code editor to format the code for us. Manually formatting code is so 2016!
 
+## Example Source Code
+```
+import React, { Component } from 'react';
+import {
+  Text,
+  ImageBackground,
+  KeyboardAvoidingView,
+  StyleSheet,
+  Button,
+  Alert,
+  TextInput,
+} from 'react-native';
+import { Constants } from 'expo';
+
+export default class App extends Component {
+  onButtonPress() {
+    Alert.alert(
+      'My App',
+      'Thanks for pushing the button! Come back soon when our app is ready.'
+    );
+  }
+
+  render() {
+    return (
+      <KeyboardAvoidingView style={styles.container} behavior="padding">
+        <ImageBackground source={{ uri: 'https://i.imgur.com/HS1BlSb.jpg' }}>
+          <Text style={styles.paragraph}>
+            Welcome.
+          </Text>
+          <Text style={styles.small}>
+            Enter your email to get started.
+          </Text>
+          <TextInput
+            style={styles.email}
+            placeholder="yourname@example.com"
+            keyboardType="email-address"
+            autoCapitalize="none"
+          />
+          <Button onPress={this.onButtonPress} title="Let's do this" />
+        </ImageBackground>
+      </KeyboardAvoidingView>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingTop: Constants.statusBarHeight,
+    backgroundColor: '#69D2E7',
+  },
+  paragraph: {
+    margin: 24,
+    fontSize: 36,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: 'white',
+  },
+  small: {
+    margin: 24,
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: 'white',
+  },
+  email: {
+    borderColor: '#eee',
+    borderWidth: 2,
+    padding: 20,
+    margin: 20,
+    fontSize: 24,
+    color: 'white',
+  },
+});
+```
+
 
 
 
