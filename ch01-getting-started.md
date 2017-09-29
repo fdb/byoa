@@ -193,8 +193,34 @@ Change the `<View>` tag to a `<KeyboardAvoidingView>`. Don't forget to change th
 <KeyboardAvoidingView style={styles.container} behavior='padding'>
 ```
 
-Now when select the email control, the content shifts around.
+Now, when we select the email control, the content conveniently shifts up.
 
 ### Exercise time!
 As you fill in your email address, you'll note that the keyboard automatically capitalizes the first letter, which is not very useful. The `TextInput` control has a property called `autoCapitalize` that you can set to `none`. Add it to your code and see what happens. Also, iOS and Android have a special keyboard for entering email addresses that includes the "@" sign next to the spacebar. Try enabling it by changing  `keyboardType` property. Look at the [TextInput reference page](https://facebook.github.io/react-native/docs/textinput.html) to find the correct value.
+
+## Images
+
+To give our app personality, we can use images. High-quality images and design make our app stand out. I've prepared an image that you can use for the background. We'll use a `BackgroundImage` component for this.
+
+We want to wrap everything inside the `KeyboardAvoidingView` into a `ImageBackground` component. On the line below the `<KeyboardAvoidingView>`, add the following:
+
+```
+      <ImageBackground  source={{uri: 'https://fdb.gitbooks.io/byoa/content/assets/expo-background.jpg'}}>
+
+```
+
+Add the closing tag as well, right before the `</KeyboardAvoidingView>` closing tag:
+
+```
+</ImageBackground>
+```
+
+This 
+
+### Stop Indenting Code Manually
+Your might have the temptation to start reformatting the code by adding spaces every time you insert or remove tags. *Don't!* Expo Snack has a format button in the bottom bar. It looks like this: `{}`. Click it and your code will be properly formatted. When we're switching to our code editor we'll also install an extension to format the code for us. Manually formatting code is so 2016!
+
+
+
+
 
