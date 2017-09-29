@@ -215,10 +215,10 @@ Add the closing tag as well, right before the `</KeyboardAvoidingView>` closing 
 </ImageBackground>
 ```
 
-This 
+As a side note, I've prepared this image to fit on my iPhone screen using the awesome [Ultimate Guide To iPhone Resolutions](https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions). 
 
 ### Stop Indenting Code Manually
-Your might have the temptation to start reformatting the code by adding spaces every time you insert or remove tags. *Don't!* Expo Snack has a format button in the bottom bar. It looks like this: `{}`. Click it and your code will be properly formatted. When we're switching to our code editor we'll also install an extension to format the code for us. Manually formatting code is so 2016!
+Your might have the temptation to start reformatting the code by adding spaces every time you insert or remove tags. *Don't!* Expo Snack has a format button in the bottom bar. It looks like this: `{}`. Click it and your code will be properly formatted. When we're developing on Mac or Windows we'll also install an extension for our code editor to format the code for us. Manually formatting code is so 2016!
 
 
 
