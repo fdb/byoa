@@ -156,6 +156,45 @@ Expo Snack reloads the app when you've stopped typing for a bit. That means that
 
 ![](/assets/expo-snack-syntax-error.png)
 
-Again, no reason to panic. Expo tries to be helpful by showing you the context of your error. In this case, I forgot closing the Alert statement with a bracket. That happened because I copied code from the [alert component reference page](https://facebook.github.io/react-native/docs/alert.html), and forgot including the last part. Ah, the wonders of copy-paste programming!
+Again, no reason to panic. Expo tries to be helpful by showing you the context of your error. In this case, I forgot closing the Alert statement with a bracket. That happened because I copied code from the [alert component reference page](https://facebook.github.io/react-native/docs/alert.html), and forgot including the last part. Ah, the wonders of copy-paste programming.
 
+## Text Input
+One of the most basic interactions is to ask a user to type text. Let's add a simple `TextInput` control. We'll also learn a tiny bit about state in React.
+
+```
+<TextInput style={styles.email} placeholder="yourname@example.com" />
+
+```
+
+Note that this refers to `styles.email`, which we don't have yet. In your style sheet at the bottom, add the following styles:
+
+```
+  email: {
+    borderColor: '#eee',
+    borderWidth: 2,
+    padding: 20,
+    margin: 20,
+    fontSize: 24,
+    color: 'white'
+  },
+```
+
+Also, add `TextInput` to the list of imports at the top. You should now see the following screen (I've changed the text on the small element as well and changed the container background color to `#69D2E7`):
+
+![](/assets/expo-snack-email.jpg)
+
+Note that as we press the email field, the keyboard pops up, almost pushing the email field off-screen. In other apps, you'll often see that the content shifts when the keyboard pops up. Wouldn't it be cool if we could do that as well?
+
+We can! React Native has a `KeyboardAvoidingView` that can shift the contents around when the keyboard appears. It has various behaviors, documented on the [reference page](https://facebook.github.io/react-native/docs/keyboardavoidingview.html). We'll use the `padding` behavior, which decreases the padding on our components so they're a bit closer together, leaving room for the keyboard.
+
+Change the `<View>` tag to a `<KeyboardAvoidingView>`. Don't forget to change the bottom tag as well. Also import the component by adding it to the `import` statement at the top. Add an extra property called `behavior` and set it to `padding`. The opening tag should look like this:
+
+```
+<KeyboardAvoidingView style={styles.container} behavior='padding'>
+```
+
+Now when select the email control, the content shifts around.
+
+### Exercise time!
+As you fill in your email address, you'll note that the keyboard automatically capitalizes the first letter, which is not very useful. The `TextInput` control has a property called `autoCapitalize` that you can set to `none`. Add it to your code and see what happens. Also, iOS and Android have a special keyboard for entering email addresses that includes the "@" sign next to the spacebar. Try enabling it by changing  `keyboardType` property. Look at the [TextInput reference page](https://facebook.github.io/react-native/docs/textinput.html) to find the correct value.
 
