@@ -70,10 +70,41 @@ const styles = StyleSheet.create({
 });
 ```
 
-This stuff.
+We see two distinct style blocks: one for the `container` (our entire screen) and one for the `paragraph` (the text in the middle). Here are some things to try:
 
+- In the container, set the `backgroundColor` to '#FA6900'. Then change the `color` of the paragraph to 'white' (without the "#" hashtag). We can also use `rgb()` and `hsl()` colors, if we want.
+- Change the `fontSize` of the paragraph to `36` or even bigger, like `72`. Note that, unlike CSS, we don't have to specify units.
 
+Imagine we're building our first screen that users see when they first open the app. In the `render()` method change the existing text element to say "Welcome.". Below it, add another `<Text>` element saying "Let's get you set up.". The render method should now look like this:
 
+ ```
+   render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.paragraph}>
+         Welcome.
+        </Text>
+        <Text style={styles.paragraph}>
+         Let's get you set up.
+        </Text>
+      </View>
+    );
+  } 
+```
+
+Because we use the same style for both text elements, they will have have the same font size. However, we want the "Welcome" text to be bigger, and the text below it a bit smaller. Let's create a second text style, called "small", for the text below the central paragraph. Copy and paste the paragraph style and call it "small". Change the `fontSize` to 18, change the color to `#69D2E7` then in the `render()` method, set the style of the second text to `styles.small`. Here's what the part of the style sheet should look:
+
+```
+  small: {
+    margin: 24,
+    fontSize: 18,
+    fontWeight: 'bold',
+    textAlign: 'center',
+    color: '#69D2E7',
+  },  
+```
+
+Now it's up to you! Play around with the styles, find your own color palette. You can look at the [Text Style reference](https://facebook.github.io/react-native/docs/text.html#style) for all options on how to style text controls. 
 
 ## Experimenting with controls
 
