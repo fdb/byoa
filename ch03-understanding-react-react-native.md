@@ -7,4 +7,4 @@
   - One directional data flow
   - Re-rendering everything: impact
   - Immediate mode vs Deferred mode
-- Virtual Dom 
+- Virtual DOM 
