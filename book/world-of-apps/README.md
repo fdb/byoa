@@ -1,8 +1,8 @@
 # Introduction
 
-Since the introduction of the iPhone, developers and designers have wanted to build apps for it. The sleek design, the smooth UI and the massive reach of the platform means that building a successful app can introduce it to millions of users. It is only through the iPhone and
+Since the introduction of the iPhone, developers and designers have wanted to build apps for it. The sleek design, the smooth UI and the massive reach of the platform means that building a successful app can introduce it to millions of users.
 
-With the introduction of Android, Google showed that they wanted to be a player in this field as well. And they succeeded massively. They've shown that even being second doesn't really matter: Android sales have far surpassed iPhone sales. However, that doesn't necessarily translate in revenue for developers: people just buy a lot more on iPhone than they do on Android.
+With the introduction of Android, Google showed that they could be a player in this field as well. And they succeeded massively. They've shown that even being second doesn't really matter: Android sales have far surpassed iPhone sales (as of 2017, they control 85% of the market). However, that doesn't necessarily translate in revenue for developers: people just buy a lot more apps on iPhone than they do on Android.
 
 ## A Fragmented World
 
@@ -14,7 +14,7 @@ A number of solutions have come up to bridge this gap. The first solution is the
 
 In 2013, Facebook introduced React, a library they were using to simplify user interface development. Later in this book we'll dive deeper into React, but the main idea was to avoid thinking about dependencies by re-rendering the entire interface whenever something changed. Of course this is ridiculously inefficient when done in a naive way, so React provided a smart way to do updates efficiently.
 
-Then in 2015, React Native came along, taking the philosophy of one-way dataflow \(again, we'll go deeper into this later on\) and bringing it to mobile applications; first on iOS, then also on Android. By separating the rendering concepts from what actually got rendered, they could use the same technology but render native controls \(buttons, sliders, pop-ups\) on both iOS and Android.
+Then in 2015, React Native came along, taking the philosophy of one-way dataflow (again, we'll go deeper into this later on) and bringing it to mobile applications; first on iOS, then also on Android. By separating the rendering concepts from what actually got rendered, they could use the same technology but render native controls (buttons, sliders, pop-ups) on both iOS and Android.
 
 React Native represents a sea change in the way we think about apps, and brings the fast tooling of the web to native development. Once set up, we can automatically view our changes without restarting the app, even without losing our position inside of the app.
 
