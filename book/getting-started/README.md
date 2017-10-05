@@ -132,7 +132,7 @@ Every React Native component needs to be imported before it can be used. We've l
 import { Text, View, StyleSheet, Button } from 'react-native';
 ```
 
-We should now see the button. However, clicking on it doesn't *do* anything, since the button is not hooked up to a method on our app. Let's write the `onButtonPress` method. I put this code above the `render()` method:
+We should now see the button. However, clicking on it doesn't _do_ anything, since the button is not hooked up to a method on our app. Let's write the `onButtonPress` method. I put this code above the `render()` method:
 
 ```
   onButtonPress() {
@@ -152,6 +152,7 @@ import { Text, View, StyleSheet, Button, Alert } from 'react-native';
 Now, tapping our button should pop up an alert box telling users to please come back when our app is ready. Awesome!
 
 ### More Troubleshooting!
+
 Expo Snack reloads the app when you've stopped typing for a bit. That means that if you haven't finished your code you might see something like this:
 
 ![](expo-snack-syntax-error.png)
@@ -159,11 +160,11 @@ Expo Snack reloads the app when you've stopped typing for a bit. That means that
 Again, no reason to panic. Expo tries to be helpful by showing you the context of your error. In this case, I forgot closing the Alert statement with a bracket. That happened because I copied code from the [alert component reference page](https://facebook.github.io/react-native/docs/alert.html), and forgot including the last part. Ah, the wonders of copy-paste programming.
 
 ## Text Input
+
 One of the most basic interactions is to ask a user to type text. Let's add a simple `TextInput` control. We'll also learn a tiny bit about state in React.
 
 ```
 <TextInput style={styles.email} placeholder="yourname@example.com" />
-
 ```
 
 Note that this refers to `styles.email`, which we don't have yet. In your style sheet at the bottom, add the following styles:
@@ -179,7 +180,7 @@ Note that this refers to `styles.email`, which we don't have yet. In your style 
   },
 ```
 
-Also, add `TextInput` to the list of imports at the top. You should now see the following screen (I've changed the text on the small element as well and changed the container background color to `#69D2E7`):
+Also, add `TextInput` to the list of imports at the top. You should now see the following screen \(I've changed the text on the small element as well and changed the container background color to `#69D2E7`\):
 
 ![](expo-snack-email.jpg)
 
@@ -196,6 +197,7 @@ Change the `<View>` tag to a `<KeyboardAvoidingView>`. Don't forget to change th
 Now, when we select the email control, the content conveniently shifts up.
 
 ### Exercise time!
+
 As you fill in your email address, you'll note that the keyboard automatically capitalizes the first letter, which is not very useful. The `TextInput` control has a property called `autoCapitalize` that you can set to `none`. Add it to your code and see what happens. Also, iOS and Android have a special keyboard for entering email addresses that includes the "@" sign next to the spacebar. Try enabling it by changing  `keyboardType` property. Look at the [TextInput reference page](https://facebook.github.io/react-native/docs/textinput.html) to find the correct value.
 
 ## Images
@@ -205,8 +207,7 @@ To give our app personality, we can use images. High-quality images and design m
 We want to wrap everything inside the `KeyboardAvoidingView` into a `ImageBackground` component. On the line below the `<KeyboardAvoidingView>`, add the following:
 
 ```
-<ImageBackground  source={{uri: 'https://fdb.gitbooks.io/byoa/content/assets/expo-background.jpg'}}>
-
+<ImageBackground source={{uri: 'https://fdb.gitbooks.io/byoa/content/assets/expo-background.jpg'}}>
 ```
 
 Add the closing tag as well, right before the `</KeyboardAvoidingView>` closing tag:
@@ -218,9 +219,11 @@ Add the closing tag as well, right before the `</KeyboardAvoidingView>` closing 
 As a side note, I've prepared this image to fit on my iPhone screen using the awesome [Ultimate Guide To iPhone Resolutions](https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions).
 
 ### Stop Indenting Code Manually
-Your might have the temptation to start reformatting the code by adding spaces every time you insert or remove tags. *Don't!* Expo Snack has a format button in the bottom bar. It looks like this: `{}`. Click it and your code will be properly formatted. When we're developing on Mac or Windows we'll also install an extension for our code editor to format the code for us. Manually formatting code is so 2016!
+
+Your might have the temptation to start reformatting the code by adding spaces every time you insert or remove tags. _Don't!_ Expo Snack has a format button in the bottom bar. It looks like this: `{}`. Click it and your code will be properly formatted. When we're developing on Mac or Windows we'll also install an extension for our code editor to format the code for us. Manually formatting code is so 2016!
 
 ## Example Source Code
+
 ```
 import React, { Component } from 'react';
 import {
@@ -297,8 +300,6 @@ const styles = StyleSheet.create({
   },
 });
 ```
-
-
 
 
 
