@@ -1,8 +1,8 @@
 # Summary
 
-* [The World Of Apps](/book/world-of-apps/)
-* [Getting Started](/book/getting-started/)
-* [Building Our First App](/book/building-our-first-app/)
+* [The World Of Apps](/book/world-of-apps/README.md)
+* [Getting Started](/book/getting-started/README.md)
+* [Building Our First App](/book/building-our-first-app/README.md)
   * [Viewing Items](/book/building-our-first-app/01-viewing-items.md)
   * [Adding a to-do item](/book/building-our-first-app/02-adding-to-do-item.md)
   * [Hooking up the text input](/book/building-our-first-app/03-hooking-up-text-input.md)
@@ -10,6 +10,6 @@
   * [Completing an item](/book/building-our-first-app/05-completing-item.md)
   * [Filtering Items](/book/building-our-first-app/06-filtering-items.md)
   * [Removing Completed Items](/book/building-our-first-app/07-removing-completed-items.md)
-* [A Refresher on JavaScript](/book/javascript-refresher/)
-* [Understanding React and React Native](/book/understanding-react-native/)
-* [Tools of the Trade](/book/tools/)
+* [A Refresher on JavaScript](/book/javascript-refresher/README.md)
+* [Understanding React and React Native](/book/understanding-react-native/README.md)
+* [Tools of the Trade](/book/tools/README.md)
