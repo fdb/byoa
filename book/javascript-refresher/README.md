@@ -20,7 +20,7 @@ So some developers thought of writing a program that takes your fancy ES6 code, 
 
 The most famous transpiler is called **Babel**. As the name suggests, it converts from one language into another. Weirdly enough, both of those languages is JavaScript.
 
-![A screenshot of the Babel interactive sandbox](/assets/babel-repl-screenshot.png)
+![A screenshot of the Babel interactive sandbox](babel-repl-screenshot.png)
 
 Being a program, Babel needs to be run every time our source code changes. This is often done through [Webpack](https://webpack.js.org/), which combines and packs all your JavaScript files into a single bundle file.
 
@@ -93,7 +93,7 @@ In general, `let` is used for variables whose contents will change during the co
 let total = 0;
 for (let i = 0; i < cart.length; i++) {
   total += cart[i].price;
-} 
+}
 ```
 
 By contrast, `const` is used for "variables" that don't change. This is useful for things that we're holding in our function, like references to document elements, shopping cart items, or database tables. For example:

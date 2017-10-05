@@ -10,7 +10,7 @@ Expo is a company that makes React Native development super-easy. They provide a
 
 Expo Snack goes a step further. All you need is a web browser and the Expo app on your phone. You write code in your browser, and the code gets compiled in the cloud and sent to the app on your phone. Apart from the phone app, there is nothing to install, and it works everywhere. It's the easiest way to get started writing apps, or just trying things out. Expo Snack is available at [expo.snack.io](https://snack.expo.io/).
 
-![](/assets/Screenshot 2017-09-29 at 20.31.44.png)![](/assets/expo-snack-screenshot.png)
+![](/expo-snack-screenshot.png)
 
 To get started, download the Expo Client for [iOS](https://itunes.apple.com/us/app/expo-client/id982107779?mt=8) or for [Android](https://play.google.com/store/apps/details?id=host.exp.exponent). Then, open a web browser on your laptop and visit [expo.snack.io](https://expo.snack.io/). This brings up a QR code that you can scan in the Expo Client on your smartphone. That sets up a live connection between your phone and the editor.
 
@@ -104,7 +104,7 @@ Because we use the same style for both text elements, they will have have the sa
   },
 ```
 
-![](/assets/expo-snack-welcome.jpg)
+![](expo-snack-welcome.jpg)
 
 Now it's up to you! Play around with the styles, find your own color palette. You can look at the [text style reference](https://facebook.github.io/react-native/docs/text.html#style) for all options on how to style text controls.
 
@@ -122,7 +122,7 @@ Below the second `<Text>` tag, add a button element that looks like this:
 
 And lo and behold: **uh-oh**:
 
-![](/assets/expo-snack-import-error.jpg)
+![](expo-snack-import-error.jpg)
 
 This looks...terrifying? Actually, the error will be simple to fix, but the error looks extremely scary. Unfortunately, apart from the first line, none of the other details can tell us anything more about the issue. So what does this mean: `Can't find variable: Button`?
 
@@ -143,7 +143,7 @@ We should now see the button. However, clicking on it doesn't *do* anything, sin
   }
 ```
 
-Note that Expo will complain about a missing `Alert` variable. Just like with our button, add it to the import statement: 
+Note that Expo will complain about a missing `Alert` variable. Just like with our button, add it to the import statement:
 
 ```
 import { Text, View, StyleSheet, Button, Alert } from 'react-native';
@@ -154,7 +154,7 @@ Now, tapping our button should pop up an alert box telling users to please come 
 ### More Troubleshooting!
 Expo Snack reloads the app when you've stopped typing for a bit. That means that if you haven't finished your code you might see something like this:
 
-![](/assets/expo-snack-syntax-error.png)
+![](expo-snack-syntax-error.png)
 
 Again, no reason to panic. Expo tries to be helpful by showing you the context of your error. In this case, I forgot closing the Alert statement with a bracket. That happened because I copied code from the [alert component reference page](https://facebook.github.io/react-native/docs/alert.html), and forgot including the last part. Ah, the wonders of copy-paste programming.
 
@@ -181,7 +181,7 @@ Note that this refers to `styles.email`, which we don't have yet. In your style 
 
 Also, add `TextInput` to the list of imports at the top. You should now see the following screen (I've changed the text on the small element as well and changed the container background color to `#69D2E7`):
 
-![](/assets/expo-snack-email.jpg)
+![](expo-snack-email.jpg)
 
 Note that as we press the email field, the keyboard pops up, almost pushing the email field off-screen. In other apps, you'll often see that the content shifts when the keyboard pops up. Wouldn't it be cool if we could do that as well?
 
@@ -215,7 +215,7 @@ Add the closing tag as well, right before the `</KeyboardAvoidingView>` closing 
 </ImageBackground>
 ```
 
-As a side note, I've prepared this image to fit on my iPhone screen using the awesome [Ultimate Guide To iPhone Resolutions](https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions). 
+As a side note, I've prepared this image to fit on my iPhone screen using the awesome [Ultimate Guide To iPhone Resolutions](https://www.paintcodeapp.com/news/ultimate-guide-to-iphone-resolutions).
 
 ### Stop Indenting Code Manually
 Your might have the temptation to start reformatting the code by adding spaces every time you insert or remove tags. *Don't!* Expo Snack has a format button in the bottom bar. It looks like this: `{}`. Click it and your code will be properly formatted. When we're developing on Mac or Windows we'll also install an extension for our code editor to format the code for us. Manually formatting code is so 2016!
