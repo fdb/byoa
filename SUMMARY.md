@@ -1,7 +1,8 @@
 # Summary
 
-* [Getting Started](/ch01-getting-started.md)
-* [Building Our First App](/ch02-building-our-first-app.md)
-* [A Refresher on JavaScript](/ch03-javascript-refresher.md)
-* [Understanding React and React Native](/ch04-understanding-react-react-native.md)
-* [Tools of the Trade](/tools-of-the-trade.md)
+* [The World Of Apps](/book/world-of-apps/)
+* [Getting Started](/book/getting-started/)
+* [Building Our First App](/book/building-our-first-app/)
+* [A Refresher on JavaScript](/book/javascript-refresher/)
+* [Understanding React and React Native](/book/understanding-react-native/)
+* [Tools of the Trade](/book/tools/)
