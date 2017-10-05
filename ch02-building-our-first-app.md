@@ -524,6 +524,7 @@ filter: {
   padding: 8
 }
 ```
+
 We've already included a call to `onFilter`, but we haven't passed that method yet from the App. Our `onFilter` method just sets a new state flag in the app called `filter` to one of the three values (`all`, `active` or `completed`):
 
 ```js
@@ -532,4 +533,28 @@ onFilter(filter) {
 }  
 ```
 
-Then, instead of our rendering all of our items all the time, we're going to render just a selection of that list.
+Then, instead of our rendering all of our items all the time, we're going to render just a selection, based on which filter we've selected. To do that, we're going to make a new `filteredItems` constant inside of our render function that looks like this:
+
+```js
+const filteredItems = this.state.items.filter(item => {
+  if (this.state.filter === 'all') {
+    return true;
+  } else if (this.state.filter === 'active' && !item.complete) {
+    return true;
+  } else if (this.state.filter === 'completed' && item.complete) {
+    return true;
+  } else {
+    return false;
+  }
+});
+```
+
+Then change the `<FlatList>` component to take in the `filteredItems`:
+
+```js
+<FlatList
+  style={styles.itemList}
+  data={filteredItems}
+  renderItem={this.renderItem.bind(this)}
+/>
+```
