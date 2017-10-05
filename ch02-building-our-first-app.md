@@ -458,4 +458,78 @@ Save it, check off an item in the app and see how it appears. Experiment with th
 
 ![](/assets/quasitodo-line-through.png)
 
+## Filtering items
 
+Our basic application is done, so we're adding a couple of extra features. First up is filtering our items: at the bottom we want to see a status line that allows us to select between all items, active items and completed items. We're going to build these controls in a new custom `<Footer>` control.
+
+Create a new file called Footer.js, and populate it with the basics:
+
+```js
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+
+export default class Footer extends React.Component {
+  render() {
+    return <View style={styles.footer} />;
+  }
+}
+
+const styles = StyleSheet.create({
+  footer: {
+    backgroundColor: '#eee',
+    width: '100%',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    padding: 10
+  }
+});
+```
+
+Like before, import it in App at the top:
+
+```js
+import Footer from './Footer';
+```
+
+Then add the filter to the `render` method, right before the closing `</View>` tag.
+
+```js
+<Footer />
+```
+To add the filters we want to make three button states. We want to be able to do our own styling so we won't use actual buttons but `<TouchableOpacity>` components. Because we'll be adding some extra components in the footer, we'll wrap our TouchableOpacity items in a nested `<View>`:
+
+```js
+<View style={styles.footer}>
+  <View style={styles.filters}>
+    <TouchableOpacity style={styles.filter} onPress={() => this.props.onFilter('all')}>
+      <Text>All</Text>
+    </TouchableOpacity>
+    <TouchableOpacity style={styles.filter} onPress={() => this.props.onFilter('active')}>
+      <Text>Active</Text>
+    </TouchableOpacity>
+    <TouchableOpacity style={styles.filter} onPress={() => this.props.onFilter('completed')}>
+      <Text>Completed</Text>
+    </TouchableOpacity>
+  </View>
+</View>
+```
+We've created three of them, each with a `<Text>` component inside with the text All / Active / Completed. We'll want to style them like this:
+
+```js
+filters: {
+  flexDirection: 'row'
+},
+filter: {
+  padding: 8
+}
+```
+We've already included a call to `onFilter`, but we haven't passed that method yet from the App. Our `onFilter` method just sets a new state flag in the app called `filter` to one of the three values (`all`, `active` or `completed`):
+
+```js
+onFilter(filter) {
+  this.setState({ filter });
+}  
+```
+
+Then, instead of our rendering all of our items all the time, we're going to render just a selection of that list.
