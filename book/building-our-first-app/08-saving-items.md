@@ -105,9 +105,54 @@ loading: {
   backgroundColor: 'rgba(255, 255, 255, 0.9)'
 }
 ```
+When you save you should see the spinner doing its thing:
 
+![](/assets/quasitodo-loading.png)
 
+Resist the strong psychological urge to wait until it's done loading. *Nothing will happen*: we haven't told it to show or hide the spinner once we're ready. We'll add a `loading` flag in state that indicates whether loading is finished.
 
+In the constructor, set loading to true initially:
 
+```js
+constructor(props) {
+  super(props);
+  this.state = { items: [], text: '', filter: 'all', loading: true };
+}
+```
+
+Change `componentWillMount` to set loading to false, regardless whether we could fetch items or not:
+
+```js
+componentWillMount() {
+  AsyncStorage.getItem('items').then(json => {
+    if (!json) {
+      // There are no items yet. We load up the initial items.
+      this.setState({ items: INITIAL_ITEMS, loading: false });
+      return;
+    }
+    try {
+      const items = JSON.parse(json);
+      this.setState({ items, loading: false });
+    } catch (e) {
+      Alert.alert('Quasitodo', 'Something went wrong when loading your items.');
+      this.setState({ items: INITIAL_ITEMS, loading: false });
+    }
+  });
+}
+```
+
+Finally, in the render method, conditionally render the spinner. Replace the loading `<View>` with this:
+
+```js
+{this.state.loading && (
+  <View style={styles.loading}>
+    <ActivityIndicator animating size="large" />
+  </View>
+)}
+```
+
+This says: check if `this.state.loading` is true, and only then render the view. Otherwise, don't render anything.
+
+Refresh the application. We should briefly see the loading indicator (with an empty interface in the back), then our list of items appears.
 
 
