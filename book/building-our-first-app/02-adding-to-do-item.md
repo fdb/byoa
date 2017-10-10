@@ -63,6 +63,7 @@ Let's replace the `<Text>` with a `<TextInput>` control. Import `TextInput` by a
   style={styles.input}
   placeholder="Add To-do"
   returnKeyType="done"
+  underlineColorAndroid="transparent"
 />
 ```
 
@@ -83,3 +84,4 @@ If we save the file we should see the text input:
 Clicking it allows us to type in something \(In the iOS Simulator you might need to go to Hardware &gt; Keyboard and choose "Toggle Software Keyboard" to see the on-screen keyboard\).
 
 However once we press done or enter, nothing happens: the item is not saved, and our text is not cleared from the input field. That's because we haven't told our app what to do once the text input is _submitted_. Let's do that now.
+
