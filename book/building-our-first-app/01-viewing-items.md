@@ -1,4 +1,4 @@
-## Viewing our to-do items
+# Viewing our to-do items
 
 The first thing I'd like to do when building an application is think about what kind of _data_ we're working with. Since we're building a to-do list application, we're going to store a list of items. Each item will have the text of the to-do, of course, but also some extra information, such as if the item was completed or not. Also, React requires us for each item to have a unique key: for that we're going to use the current date and time \(which, since it is stored internally in milliseconds, should never have two duplicate keys\).
 

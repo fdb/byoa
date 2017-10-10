@@ -1,4 +1,4 @@
-## Filtering items
+# Filtering items
 
 Our basic application is done, so we're adding a couple of extra features. First up is filtering our items: at the bottom we want to see a status line that allows us to select between all items, active items and completed items. We're going to build these controls in a new custom `<Footer>` control.
 

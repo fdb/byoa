@@ -1,4 +1,4 @@
-## Hooking up the text input field
+# Hooking up the text input field
 
 So far we haven't talked about state yet. Every application needs some _state_: information that describes the particular condition our app is in. In our case that might be which to-do items we have. Later on we're going to add filters to see the active or completed items. Our state will capture which filter is currently selected.
 

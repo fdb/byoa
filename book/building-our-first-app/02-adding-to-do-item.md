@@ -1,4 +1,4 @@
-## Adding a to-do item
+# Adding a to-do item
 
 Add the top of our app we're going to add a text input where we can add new to-do items. We're going to put this in a custom `<Header>` component that we'll store in a separate file.
 

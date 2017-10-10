@@ -1,4 +1,4 @@
-## Completing an item
+# Completing an item
 
 We now have a list of to-do items, but we want to be able to mark them off as done once we've actually completed them. To do that we're going to add a [Switch](https://facebook.github.io/react-native/docs/switch.html) component that can be toggled between "on" and "off".
 

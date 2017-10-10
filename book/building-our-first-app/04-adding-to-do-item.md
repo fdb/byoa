@@ -1,4 +1,4 @@
-## Adding the new to-do item
+# Adding the new to-do item
 
 To add the to-do item we'll write an `onAddItem` method in our App.js that looks like this:
 
@@ -24,7 +24,7 @@ The text of the new item comes from the state, so we just pass in `this.state.te
 
 The next line is a bit weird if you're not used to React:
 
-```
+```js
 const newItems = [...this.state.items, newItem];
 ```
 
@@ -32,7 +32,7 @@ This makes a _new_ list that contains all of the current values, and tacks on th
 
 The reason we make a new list, instead of just using `push` is because it allows us to do some nifty tricks later on. For example, if we want to support undo, we can keep a history of all of the states of our application. By making a new list every time, we can just point React to that state, and it will render the old list just like it was.
 
-```
+```js
 this.setState({ items: newItems, text: '' });
 ```
 

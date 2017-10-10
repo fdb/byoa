@@ -1,4 +1,4 @@
-## Removing completed items
+# Removing completed items
 
 Once items are completed, it is no longer useful to keep them around. We're going to add a button to the footer that removes completed items from our app. Start by hooking up the button in the footer. This code goes in `render`, right before the last closing `</View>`:
 

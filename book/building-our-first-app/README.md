@@ -20,7 +20,7 @@ Let it do its thing for a bit. Click on the "Device" button in the toolbar and c
 
 If we look in the sidebar we see that we have a lot more than just one file! We now have a directory containing multiple folders \(`assets`, `node_modules`\) and multiple cryptic files. For now, we're just going to focus on the _entry point_ of our application, which is `App.js`. It looks like this:
 
-```
+```js
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
