@@ -67,6 +67,8 @@ Let's replace the `<Text>` with a `<TextInput>` control. Import `TextInput` by a
 />
 ```
 
+\(Note that we have some Android-specific styling set here - you can find all properties in the [TextInput reference](https://facebook.github.io/react-native/docs/textinput.html)\).
+
 Add the styling information for the text input. Note that we have to add a comma after the closing bracket of the container styling!
 
 ```js
