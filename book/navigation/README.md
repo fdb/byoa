@@ -130,7 +130,8 @@ Now we can create a `componentDidMount` method below the constructor that will l
 
 ```js
 componentDidMount() {
-  CameraRoll.getPhotos({ first: 25 }).then(r => this.setState({ photos: r.edges }));
+  CameraRoll.getPhotos({ first: 25 })
+    .then(r => this.setState({ photos: r.edges }));
   }
 }
 ```
