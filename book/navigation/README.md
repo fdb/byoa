@@ -136,3 +136,9 @@ componentDidMount() {
 }
 ```
 
+We ask the `CameraRoll` object to get the first 25 photos. On iOS, this will show a permission popup; on Android in the Expo app, this will silently fail. You have to go to Apps > Expo > Permission and explicitly enable the "external storage" permission.
+
+Once we have the photos set in the state object, we can display them in the render method:
+
+
+
