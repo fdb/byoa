@@ -1,5 +1,7 @@
 # Building Our First App
 
+**[Finished project on GitHub](https://github.com/fdb/byoa/tree/master/apps/quasitodo)**
+
 We're going to build our first small to-do list app that allows us to create new items and mark of items as done. This is a bit the "hello world" of apps but it shows us a good tour of everything we can do: adding items, marking them as complete, deleting items, ... We'll focus on the functionality, not on the visual looks, so our app won't exactly look very sexy. That's why we'll call it **"Quasitodo"**. So let's get started!
 
 To do this we're going to install the Expo XDE on our machine. This is one step up from Expo Snack: we still have the convenience of running everything directly on our phone, but our project is now a self-contained folder on our computer.
