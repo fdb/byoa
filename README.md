@@ -12,3 +12,6 @@ This book introduces you to the world of apps, and how to get started writing yo
 * App design: animations, gestures
 * How to prepare the correct materials for marketing
 * How to acquire and retain your users.
+
+
+
