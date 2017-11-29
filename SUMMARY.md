@@ -10,7 +10,12 @@
   * [Completing an item](/book/building-our-first-app/05-completing-item.md)
   * [Filtering Items](/book/building-our-first-app/06-filtering-items.md)
   * [Removing Completed Items](/book/building-our-first-app/07-removing-completed-items.md)
+  * [Saving Items](/book/building-our-first-app/08-saving-items.md)
+* [Navigating Between Screens](/book/navigation/README.md)
 * [A Refresher on JavaScript](/book/javascript-refresher/README.md)
   * [Variables: Let and Const](/book/javascript-refresher/01-variables.md)
 * [Understanding React and React Native](/book/understanding-react-native/README.md)
 * [Tools of the Trade](/book/tools/README.md)
+
+
+
