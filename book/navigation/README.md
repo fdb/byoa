@@ -1,4 +1,6 @@
-# Adding Navigation
+# Navigating Between Screens
+
+**[GitHub code for this project](https://github.com/fdb/byoa/tree/master/apps/photoview)**
 
 We've mainly focused on one screen. However, most apps will have _lots_ of screens, so we need a way to move between them.
 
@@ -251,4 +253,5 @@ const styles = StyleSheet.create({
 
 And we're done! As an exercise, try styling the image further, center it, or make it fill the screen.
 
-![](photoview-detail.png)});
+![](photoview-detail.png)
+
