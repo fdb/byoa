@@ -14,3 +14,8 @@ _book
 *.epub
 *.mobi
 *.pdf
+
+# Apps
+node_modules/**/*
+.expo/*
+npm-debug.*
