@@ -24,7 +24,6 @@ export default class LoginScreen extends React.Component {
       .auth()
       .signInWithEmailAndPassword(email, password)
       .catch(e => {
-        console.log(e);
         this.setState({ error: `Login failed: ${e.message}`, loading: false });
       });
   }
@@ -37,7 +36,6 @@ export default class LoginScreen extends React.Component {
       .auth()
       .createUserWithEmailAndPassword(email, password)
       .catch(e => {
-        console.log(e);
         this.setState({ error: `Sign up failed: ${e.message}`, loading: false });
       });
   }
