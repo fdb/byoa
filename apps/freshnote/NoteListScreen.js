@@ -4,11 +4,9 @@ import firebase from 'firebase';
 
 const DEFAULT_NOTES = [
   {
-    key: 1512027663498,
     text: 'Welcome to Freshnote! Use the app for recording thoughts, large and small.'
   },
   {
-    key: 1512027698885,
     text: 'These are the default notes but you can delete them.'
   }
 ];
@@ -35,6 +33,7 @@ export default class NoteListScreen extends React.Component {
       });
       if (notes.length === 0) {
         notes = DEFAULT_NOTES;
+        this.notesRef.set(DEFAULT_NOTES);
       }
       this.setState({ notes, loading: false });
     });
