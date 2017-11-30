@@ -20,7 +20,6 @@ export default class NoteDetailScreen extends React.Component {
 
   onChangeText(text) {
     this.noteRef.set({ text });
-    this.setState({ text });
   }
 
   render() {
