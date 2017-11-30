@@ -1,4 +1,4 @@
-# Getting Started
+# Getting Started with Firebase
 
 First we'll create a new Expo project. Open the Expo XDE and create a new blank project, called `freshnote`, or use the command line:
 
