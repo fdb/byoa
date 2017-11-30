@@ -3,12 +3,8 @@ import { View, Button, FlatList, ActivityIndicator, Text, TouchableHighlight, St
 import firebase from 'firebase';
 
 const DEFAULT_NOTES = [
-  {
-    text: 'Welcome to Freshnote! Use the app for recording thoughts, large and small.'
-  },
-  {
-    text: 'These are the default notes but you can delete them.'
-  }
+  { text: 'Welcome to Freshnote! Use the app for recording thoughts, large and small.' },
+  { text: 'These are the default notes but you can delete them.' }
 ];
 
 export default class NoteListScreen extends React.Component {
