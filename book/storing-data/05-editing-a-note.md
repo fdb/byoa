@@ -23,7 +23,7 @@ Then, whenever the value changes externally, we want to set the text to the new 
 componentDidMount() {
   this.noteRef = firebase.database().ref(this.state.key);
   this.noteRef.on('value', snap => {
-    const newNote = snap.val();
+    const newNote = snap.val();![](/assets/freshnote-edit-note.png)
     this.setState({ text: newNote.text });
   });
 }
@@ -87,4 +87,8 @@ const styles = StyleSheet.create({
   }
 });
 ```
+
+Here's what it looks like:
+
+![](freshnote-edit-note.png)
 
