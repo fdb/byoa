@@ -1,5 +1,6 @@
 import React from 'react';
-import { View, FlatList, Text, TouchableHighlight, StyleSheet } from 'react-native';
+import { View, Button, FlatList, ActivityIndicator, Text, TouchableHighlight, StyleSheet } from 'react-native';
+import firebase from 'firebase';
 
 const DEFAULT_NOTES = [
   {
@@ -19,7 +20,24 @@ export default class NoteListScreen extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { notes: DEFAULT_NOTES };
+    this.state = { loading: true, notes: [] };
+  }
+
+  componentDidMount() {
+    const currentUser = firebase.auth().currentUser;
+    console.assert(currentUser);
+    const notesKey = `notes/${currentUser.uid}`;
+    this.notesRef = firebase.database().ref(notesKey);
+    this.notesRef.on('value', snap => {
+      let notes = [];
+      snap.forEach(child => {
+        notes.push({ key: notesKey + '/' + child.key, text: child.val().text });
+      });
+      if (notes.length === 0) {
+        notes = DEFAULT_NOTES;
+      }
+      this.setState({ notes, loading: false });
+    });
   }
 
   onChooseNote(note) {
@@ -30,6 +48,7 @@ export default class NoteListScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        {this.state.loading && <ActivityIndicator style={styles.loading} />}
         <FlatList style={styles.noteList} data={this.state.notes} renderItem={this.renderItem.bind(this)} />
       </View>
     );
@@ -51,6 +70,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f7f7f7'
+  },
+  loading: {
+    paddingTop: 50
   },
   noteList: {
     width: '100%'
