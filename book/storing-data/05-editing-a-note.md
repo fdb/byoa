@@ -74,6 +74,8 @@ render() {
 
 Most of this is adding the correct properties to the [TextInput component](https://facebook.github.io/react-native/docs/textinput.html). Note that we also add an extra line that shows the _key_ of each note. This is just for debugging.
 
+Don't forget to add `TextImport` to the list of imports at the top of the file.
+
 We'll style the components and we're done:
 
 ```js
