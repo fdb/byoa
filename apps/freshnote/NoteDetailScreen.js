@@ -42,8 +42,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f7f7f7',
-    padding: 10,
-    flexDirection: 'column'
+    padding: 10
   },
   noteInput: {
     fontSize: 16,
