@@ -29,7 +29,7 @@ Then, whenever the value changes externally, we want to set the text to the new 
 componentDidMount() {
   this.noteRef = firebase.database().ref(this.state.key);
   this.noteRef.on('value', snap => {
-    const newNote = snap.val();![](/assets/freshnote-edit-note.png)
+    const newNote = snap.val()
     this.setState({ text: newNote.text });
   });
 }
