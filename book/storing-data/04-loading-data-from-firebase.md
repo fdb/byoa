@@ -143,5 +143,7 @@ render() {
 }
 ```
 
+Add `ActivityIndicator` to the list of react-native imports.
+
 After all these changes, we have now successfully integrated Firebase into our app. Go back the Firebase console, switch to the Database tab, and you should see the notes of our user being loaded. What's more, since this is a _realtime_ database, we can change the text of the notes in the console and see the changes immediately in the app. Awesome!
 
