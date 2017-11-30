@@ -9,6 +9,7 @@ export default class LoginScreen extends React.Component {
   }
 
   componentDidMount() {
+    this.setState({ error: '', loading: false });
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.props.navigation.navigate('NoteList');
