@@ -27,6 +27,12 @@ const DEFAULT_NOTES = [
 ];
 ```
 
+Import Firebase at the top of the file:
+
+```js
+import firebase from "firebase";
+```
+
 We'll then update  the constructor where we set the `notes` list to an empty list and add a `loading` flag:
 
 ```js
