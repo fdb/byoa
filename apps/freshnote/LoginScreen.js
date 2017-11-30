@@ -23,10 +23,6 @@ export default class LoginScreen extends React.Component {
     firebase
       .auth()
       .signInWithEmailAndPassword(email, password)
-      .then(() => {
-        this.setState({ error: '', loading: false });
-        this.props.navigation.reset('NoteList');
-      })
       .catch(e => {
         console.log(e);
         this.setState({ error: `Login failed: ${e.message}`, loading: false });
@@ -40,10 +36,6 @@ export default class LoginScreen extends React.Component {
     firebase
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      .then(() => {
-        this.setState({ error: '', loading: false });
-        this.props.navigation.navigate('NoteList');
-      })
       .catch(e => {
         console.log(e);
         this.setState({ error: `Sign up failed: ${e.message}`, loading: false });
