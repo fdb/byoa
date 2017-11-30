@@ -101,7 +101,9 @@ snap.forEach(child => {
 
 Since this is a tree, we ask the _parent_ value for its _children_. These are the individual note objects. These have some Firebase-specific info: a key and a value. For the key, we want the _entire_ key so we'll prepend our `notesKey` to the `childKey`. This mean each note will have a key that looks like:
 
-```notes/MKblPhx4loatGPFvRrGlaaMCfSp2/001```
+```
+notes/MKblPhx4loatGPFvRrGlaaMCfSp2/001
+```
 
 The other data is the text of each node. Here, we use the `val()` method to give us the value of each child, and then retrieve the text.
 
