@@ -38,11 +38,11 @@ export default class NoteListScreen extends React.Component {
   renderItem(item) {
     const note = item.item;
     return (
-      <View style={styles.noteItem}>
-        <TouchableHighlight key={note.key} onPress={this.onChooseNote.bind(this, note)}>
+      <TouchableHighlight key={note.key} onPress={this.onChooseNote.bind(this, note)}>
+        <View style={styles.noteItem}>
           <Text numberOfLines={1}>{note.text}</Text>
-        </TouchableHighlight>
-      </View>
+        </View>
+      </TouchableHighlight>
     );
   }
 }
