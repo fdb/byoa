@@ -30,13 +30,21 @@ import { StackNavigator } from "react-navigation";
 import NoteListScreen from "./NoteListScreen";
 import NoteDetailScreen from "./NoteDetailScreen";
 
-export default (App = StackNavigator({
-NoteList: { screen: NoteListScreen },
-NoteDetail: { screen: NoteDetailScreen }
-}));
+const AppNavigator = StackNavigator({
+  NoteList: { screen: NoteListScreen },
+  NoteDetail: { screen: NoteDetailScreen }
+});
+
+export default class App extends React.Component {
+ render() {
+    return <AppNavigator />;
+  }
+}
 ```
 
-The code won't run anymore since it references two screens that don't exist yet. We'll create those now.
+Note that we split up the navigator and the app component. That's because we'll need to add extra things to our App component once we're integrating Firebase.
+
+The code won't work right now since it references two screens that don't exist yet. We'll create those now.
 
 ## Setting up the Note List Screen
 
