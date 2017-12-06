@@ -6,7 +6,13 @@ Our `NoteDetailScreen` shows the content of each note but we can't edit them yet
 - Keep the state of the `text` currently being edited.
 - Create a Firebase ref to retrieve and set the value of the note.
 
-Let's update the `NoteDetailScreen` constructor first. We want to have it retrieve the params from the navigation, which contains the note to be edited:
+First, let's add an import to Firebase in the `NoteDetailScreen`:
+
+```js
+import firebase from "firebase";
+```
+
+Then let's update the `NoteDetailScreen` constructor. We want to have it retrieve the params from the navigation, which contains the note to be edited:
 
 ```js
 constructor(props) {
@@ -68,6 +74,8 @@ render() {
 
 Most of this is adding the correct properties to the [TextInput component](https://facebook.github.io/react-native/docs/textinput.html). Note that we also add an extra line that shows the _key_ of each note. This is just for debugging.
 
+Don't forget to add `TextImport` to the list of imports at the top of the file.
+
 We'll style the components and we're done:
 
 ```js
@@ -87,4 +95,8 @@ const styles = StyleSheet.create({
   }
 });
 ```
+
+Here's what it looks like:
+
+![](freshnote-edit-note.png)
 

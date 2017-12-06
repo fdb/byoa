@@ -27,6 +27,12 @@ const DEFAULT_NOTES = [
 ];
 ```
 
+Import Firebase at the top of the file:
+
+```js
+import firebase from "firebase";
+```
+
 We'll then update  the constructor where we set the `notes` list to an empty list and add a `loading` flag:
 
 ```js
@@ -101,7 +107,9 @@ snap.forEach(child => {
 
 Since this is a tree, we ask the _parent_ value for its _children_. These are the individual note objects. These have some Firebase-specific info: a key and a value. For the key, we want the _entire_ key so we'll prepend our `notesKey` to the `childKey`. This mean each note will have a key that looks like:
 
-```notes/MKblPhx4loatGPFvRrGlaaMCfSp2/001```
+```
+notes/MKblPhx4loatGPFvRrGlaaMCfSp2/001
+```
 
 The other data is the text of each node. Here, we use the `val()` method to give us the value of each child, and then retrieve the text.
 
@@ -132,6 +140,14 @@ render() {
       <FlatList style={styles.noteList} data={this.state.notes} renderItem={this.renderItem.bind(this)} />
     </View>
   );
+}
+```
+
+Add `ActivityIndicator` to the list of react-native imports. You can style the indicator by adding the following code in the `styles` object (don't forget the comma at the end of the previous item):
+
+```
+loading: {
+    paddingTop: 50
 }
 ```
 
