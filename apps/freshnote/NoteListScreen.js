@@ -8,8 +8,12 @@ const DEFAULT_NOTES = [
 ];
 
 export default class NoteListScreen extends React.Component {
-  static navigationOptions = {
-    title: 'All Notes'
+  static navigationOptions = ({ navigation }) => {
+    const { params = {} } = navigation.state;
+    return {
+      title: 'All Notes',
+      headerLeft: <Button title="Sign Out" onPress={params.onSignOut ? params.onSignOut : () => null} />
+    };
   };
 
   constructor(props) {
@@ -33,6 +37,19 @@ export default class NoteListScreen extends React.Component {
       }
       this.setState({ notes, loading: false });
     });
+
+    this.props.navigation.setParams({
+      onSignOut: this.onSignOut.bind(this)
+    });
+  }
+
+  onSignOut() {
+    firebase
+      .auth()
+      .signOut()
+      .then(() => {
+        this.props.navigation.goBack();
+      });
   }
 
   onChooseNote(note) {
