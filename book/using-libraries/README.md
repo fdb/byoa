@@ -95,8 +95,28 @@ constructor(props) {
 }
 ```
 
-This says that w`onSpeechResults`
+This says that whenever we receive speech results we call the `onSpeechResults` method, which we still have to make:
 
+```js
+onSpeechResults(results) {
+  const recognizedWords = results.value;
+  this.setState({ recognizedText: recognizedWords.join(' ') });
+}
+```
+
+We're going to add a button that will toggle recording, so make it:
+
+```js
+onToggleRecording() {
+  if (!this.state.recording) {
+    Voice.start('en');
+    this.setState({ recording: true });
+  } else {
+    Voice.stop();
+    this.setState({ recording: false });
+  }
+}
+```
  
    Then replace the `render` function with the following code:
 
@@ -112,4 +132,8 @@ render() {
 }
 ```
 
-You can see we refer to `state.recording` and `state.recognizedText`, which don't exist yet. 
+There is one last thing: to use the microphone we need permissions. Again the [GitHub Page](https://github.com/wenkesj/react-native-voice#permissions) explains this, but for iOS we need to change the settings in `Info.plist` like this:
+
+![](thevoice-permissions.png)
+
+We added "Privacy - Microphone Usage Description" and "Privacy - Speech Recognition Usage Description". These need to have a short explanation of *why* you would want voice permissions.
