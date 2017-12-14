@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduction](README.md)
 * [The World Of Apps](/book/world-of-apps/README.md)
 * [Getting Started](/book/getting-started/README.md)
 * [Building Our First App](/book/building-our-first-app/README.md)
@@ -22,6 +23,5 @@
   * [Variables: Let and Const](/book/javascript-refresher/01-variables.md)
 * [Understanding React and React Native](/book/understanding-react-native/README.md)
 * [Tools of the Trade](/book/tools/README.md)
-
-
+* [Using Native Extensions](using-native-extensions.md)
 
