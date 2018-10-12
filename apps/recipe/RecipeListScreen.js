@@ -47,12 +47,14 @@ export default class RecipeListScreen extends React.Component {
 
   _renderRecipe({ item }) {
     return (
-      <View style={styles.recipe}>
-        <Image source={{ uri: item.image_url }} style={styles.image} />
-        <Text style={styles.title}>{item.title}</Text>
-        <Text style={styles.author}>{item.author}</Text>
-        <Ionicons name="md-heart" size={24} color="white" style={styles.heart} />
-      </View>
+      <TouchableOpacity>
+        <View style={styles.recipe}>
+          <Image source={{ uri: item.image_url }} style={styles.image} />
+          <Text style={styles.title}>{item.title}</Text>
+          <Text style={styles.author}>{item.author}</Text>
+          <Ionicons name="md-heart" size={24} color="white" style={styles.heart} />
+        </View>
+      </TouchableOpacity>
     );
   }
 }
@@ -61,7 +63,6 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: '#252E33',
     flex: 1,
-    paddingTop: Constants.statusBarHeight,
   },
   list: {
     paddingTop: 20,
@@ -79,7 +80,7 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     shadowOffset: { width: 0, height: 4 },
     shadowRadius: 4,
-    shadowOpacity: 0.2,
+    shadowOpacity: 0.5,
     overflow: 'hidden',
   },
   image: {

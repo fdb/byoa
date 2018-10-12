@@ -35,7 +35,8 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    height: 60,
+    height: 60 + Constants.statusBarHeight,
+    paddingTop: Constants.statusBarHeight,
     paddingHorizontal: 10,
   },
   logo: {
