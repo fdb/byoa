@@ -5,7 +5,7 @@ The first thing I'd like to do when building an application is think about what 
 Let's add some dummy data at the top of our `App.js`, right below our `import` statements:
 
 ```js
-const items = [
+const INITIAL_ITEMS = [
   {key: 1507129580608, text: 'Buy bread', complete: false},
   {key: 1507129597587, text: 'Walk the dog', complete: false},
 ]
@@ -16,10 +16,10 @@ Since we don't have any user interface at all, let's start by _rendering_ our li
 Let's import `FlatList` from `react-native` \(add it to the import statement at the top, after `Text` and `View`\). Then, replace the `<Text>` component with a `<FlatList>` like this:
 
 ```js
-<FlatList data={items} renderItem={this.renderItem.bind(this)} />
+<FlatList data={INITIAL_ITEMS} renderItem={this.renderItem.bind(this)} />
 ```
 
-Pretty simple, except for the weird "bind" thing. Ignore that for now — we'll talk about it later. Let's write this `renderItem` function. Add it below the `render()` function. It will take in an item and return a `<Text>` element for each item.
+Our list will use the data from the `INITIAL_ITEMS` and render those out, piece by piece, using the `renderItem` method. Pretty simple, except for the weird "bind" thing. Ignore that for now — we'll talk about it later. Let's write this `renderItem` function. Add it below the `render()` function. It will take in an item and return a `<Text>` element for each item.
 
 ```js
 renderItem(item) {
@@ -70,3 +70,4 @@ Here's a short overview of the styling information:
 * The itemText just has a fontSize and color. We can use named colors \('red', 'green', ...\), hexadecimal values, and rgba/hsl combinations, just like in CSS.
 
 Note that this is just one way of styling the controls: experiment with the colors and font sizes to make it your own!
+

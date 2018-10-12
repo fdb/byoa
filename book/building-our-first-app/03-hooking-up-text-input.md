@@ -11,11 +11,17 @@ We can specify a class _constructor_ that gets run when a component gets created
 ```js
 constructor(props) {
   super(props);
-  this.state = { items, text: '' };
+  this.state = { items: INITIAL_ITEMS, text: '' };
 }
 ```
 
 Ignoring the `super` line \(which just passes on information to React's internals\) we see that we set the state of the application using `this.state`. The state contains two pieces of information: the list of to-do items \(initially those come from the fixed list we've initialized at the top: we'll replace this with the saved list of items later\), and the text we're editing.
+
+To make sure we're actually rendering the updated list, change the `render` method to render the current list of items, not just the `INITIAL_ITEMS`. Change the `<FlatList>` code in `render` like so:
+
+```js
+<FlatList data={this.state.items} renderItem={this.renderItem.bind(this)} />
+```
 
 That last part is a bit weird, so let me explain: all state in React is captured, every very small state like the letters of the text we're typing. When I first started React, it seemed logical to just want to extract data from the text input but that's not the way it works. Instead, think of it as re-rendering the entire application between each key press. If we think of it that way, React has to know what value is in the text input field \(our partial to-do item text\) otherwise it won't be able to render. So we're remembering this text. In addition, we're going to set this text every time we change it \(meaning, again, on every key press\). Let's do that now:
 
@@ -63,3 +69,4 @@ onChangeText(text) {
 ```
 
 Now, whenever we type, all of our incoming text will be converted to upper-case letters. When you're done experimenting, change it back to the previous version \(`{text}`\).
+

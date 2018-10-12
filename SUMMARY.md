@@ -1,5 +1,6 @@
 # Summary
 
+* [Introduction](README.md)
 * [The World Of Apps](/book/world-of-apps/README.md)
 * [Getting Started](/book/getting-started/README.md)
 * [Building Our First App](/book/building-our-first-app/README.md)
@@ -18,10 +19,10 @@
   * [The Login and Sign Up Screen](/book/storing-data/03-login-and-sign-up.md)
   * [Loading Data](/book/storing-data/04-loading-data-from-firebase.md)
   * [Editing a Note](/book/storing-data/05-editing-a-note.md)
+* [Using Libraries](/book/using-libraries/README.md)
 * [A Refresher on JavaScript](/book/javascript-refresher/README.md)
   * [Variables: Let and Const](/book/javascript-refresher/01-variables.md)
 * [Understanding React and React Native](/book/understanding-react-native/README.md)
 * [Tools of the Trade](/book/tools/README.md)
-
 
 
