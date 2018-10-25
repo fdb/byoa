@@ -5,9 +5,5 @@ Figma is an online design application. We use Figma to create the design of our 
 ![Overview of Figma](/book/designing-with-figma/figma-overview.jpg)
 
 ## Frames
-Schermen in Figma maken we aan door een nieuw frame te maken.
 
-Getting started with app development requires an installation process that takes a while. Because the tooling space is quite young, a lot of the tools are in flux: new versions introduce incompatibilities, and things that used to work 6 months ago now no longer run. Obviously, this can be very frustrating if you just want to dive in and start writing an application.
-
-Fortunately, if we just want to get started, we don't have to do all of this. We can build small React Native apps with nothing more than our smartphone and a web browser. Meet Expo Snack.
-
+To make new screens in Figma we use *frames*. When creating a frame, we can choose which device size we want to use. Don't worry too much about iPhone vs iPhone plus, we will work around this with React Native's layout system later.
