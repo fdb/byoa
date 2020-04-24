@@ -7,13 +7,17 @@ export default class NoteDetailScreen extends React.Component {
     super(props);
     const { params } = this.props.navigation.state;
     const note = params.note;
+    console.log('CONSTRUCT ', note);
     this.state = { key: note.key, text: note.text };
   }
 
   componentDidMount() {
     this.noteRef = firebase.database().ref(this.state.key);
+    console.log('NOTE REF', this.noteRef);
     this.noteRef.on('value', snap => {
+      console.log('VALUE', snap);
       const newNote = snap.val();
+      console.log('NEWNOTE', newNote);
       this.setState({ text: newNote.text });
     });
   }

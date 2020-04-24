@@ -12,7 +12,8 @@ export default class NoteListScreen extends React.Component {
     const { params = {} } = navigation.state;
     return {
       title: 'All Notes',
-      headerLeft: <Button title="Sign Out" onPress={params.onSignOut ? params.onSignOut : () => null} />
+      headerLeft: <Button title="Sign Out" onPress={params.onSignOut ? params.onSignOut : () => null} />,
+      headerRight: <Button title="Create Note" onPress={params.onCreateNote ? params.onCreateNote : () => null} />
     };
   };
 
@@ -39,7 +40,8 @@ export default class NoteListScreen extends React.Component {
     });
 
     this.props.navigation.setParams({
-      onSignOut: this.onSignOut.bind(this)
+      onSignOut: this.onSignOut.bind(this),
+      onCreateNote: this.onCreateNote.bind(this)
     });
   }
 
@@ -50,6 +52,19 @@ export default class NoteListScreen extends React.Component {
       .then(() => {
         this.props.navigation.goBack();
       });
+  }
+
+  onNoteCreated() {}
+
+  onCreateNote() {
+    const newNote = { text: 'NEW NOTE ' + Date.now() };
+    const newNoteRef = this.notesRef.push(newNote);
+    newNoteRef.on('value', snap => {
+      console.log('CREATED ', newNoteRef.key);
+      newNote.key = newNoteRef.key;
+      const navigate = this.props.navigation.navigate;
+      navigate('NoteDetail', { note: newNote });
+    });
   }
 
   onChooseNote(note) {
