@@ -10,7 +10,7 @@ Expo is a company that makes React Native development super-easy. They provide a
 
 Expo Snack goes a step further. All you need is a web browser and the Expo app on your phone. You write code in your browser, and the code gets compiled in the cloud and sent to the app on your phone. Apart from the phone app, there is nothing to install, and it works everywhere. It's the easiest way to get started writing apps, or just trying things out. Expo Snack is available at [expo.snack.io](https://snack.expo.io/).
 
-![](/expo-snack-screenshot.png)
+![](/book/getting-started/expo-snack-screenshot.png)
 
 To get started, download the Expo Client for [iOS](https://itunes.apple.com/us/app/expo-client/id982107779?mt=8) or for [Android](https://play.google.com/store/apps/details?id=host.exp.exponent). Then, open a web browser on your laptop and visit [expo.snack.io](https://expo.snack.io/). This brings up a QR code that you can scan in the Expo Client on your smartphone. That sets up a live connection between your phone and the editor.
 
@@ -202,7 +202,7 @@ As you fill in your email address, you'll note that the keyboard automatically c
 
 ### Stop Indenting Code Manually
 
-Your might have the temptation to start reformatting the code by adding spaces every time you insert or remove tags. _Don't!_ Expo Snack has a format button in the bottom bar. It looks like this: `{}`. Click it and your code will be properly formatted. When we're developing on Mac or Windows we'll also install an extension for our code editor to format the code for us. Manually formatting code is so 2016!
+You might have the temptation to start reformatting the code by adding spaces every time you insert or remove tags. _Don't!_ Expo Snack has a format button in the bottom bar. It looks like this: `{}`. Click it and your code will be properly formatted. When we're developing on Mac or Windows we'll also install an extension for our code editor to format the code for us. Manually formatting code is so 2016!
 
 ## Example Source Code
 
